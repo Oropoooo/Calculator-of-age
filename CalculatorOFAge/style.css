@@ -1,0 +1,144 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+}
+
+@font-face {
+  font-family: Pop;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+  font-family: Pop !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--Off-white);
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--White);
+  width: 420px;
+  max-width: 80%;
+  padding: 30px;
+  position: relative;
+  border-bottom-right-radius: 195px;
+  border-bottom-left-radius: 23px;
+  border-top-right-radius: 23px;
+  border-top-left-radius: 21px;
+}
+
+input {
+  width: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--Off-white);
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid var(--Purple);
+}
+
+small {
+  color: red;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.submit-btn {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  background-color: var(--Purple);
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 49%;
+  transform: translateY(-225%);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: black;
+}
+
+.output span {
+  font-size: 3rem;
+  color: var(--Purple);
+  margin-right: 8px;
+}
+
+.output h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.input-flex {
+  display: flex;
+  border-bottom: 3px solid var(--Off-white);
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .input-flex {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 11px;
+  }
+
+  .input-container {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  .submit-btn {
+    right: 50%;
+    top: 50%;
+    transform: translate(55%, -195%);
+  }
+
+  .submit-btn img {
+    transform: scale(0.6);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
